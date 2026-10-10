@@ -22,7 +22,12 @@ export const RegisterUI = ({
   <main className={styles.container}>
     <div className={`pt-6 ${styles.wrapCenter}`}>
       <h3 className="pb-6 text text_type_main-medium">Регистрация</h3>
-      <form className={`pb-15 ${styles.form}`} name="register" onSubmit={handleSubmit}>
+      <form
+        className={`pb-15 ${styles.form}`}
+        name="register"
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
         <>
           <div className="pb-6">
             <Input
@@ -31,6 +36,7 @@ export const RegisterUI = ({
               onChange={(e) => setUserName(e.target.value)}
               value={userName}
               name="name"
+              autoComplete="off"
               error={false}
               errorText=""
               size="default"
@@ -43,6 +49,7 @@ export const RegisterUI = ({
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               name={'email'}
+              autoComplete="off"
               error={false}
               errorText=""
               size={'default'}
@@ -53,6 +60,7 @@ export const RegisterUI = ({
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               name="password"
+              autoComplete="new-password"
             />
           </div>
           <div className={`pb-6 ${styles.button}`}>
